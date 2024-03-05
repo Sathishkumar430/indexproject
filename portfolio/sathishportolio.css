@@ -1,0 +1,538 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+    cursor: pointer;
+}
+nav{
+    width: 100%;
+    position: static;
+    top: 0;
+    left:0; 
+    box-shadow: 0px 5px 8px  black ;
+    z-index: 10;
+}
+.navbar-brand{
+    font-weight:800 ;
+    letter-spacing: 1px;
+
+}
+.nav-link{
+    color: white !important;
+    transition: 1.2s;
+}
+.nav-link:hover{
+    transform: scale(0.9);
+    color: rgb(231, 50, 50) !important;
+    border-bottom: 1px solid white;
+}
+span{
+    color: rgb(231, 50, 50) !important;
+
+}
+section{
+    width: 100%;
+    height: 100vh;
+}
+#home{
+    color: white;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background-color: greenyellow;
+    background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.6)), url(prtimg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+}
+#home p{
+    position: absolute;
+    top: 30%;
+    left:10%;
+    font-size: 60px;
+    opacity: 0;
+    animation-name: text;
+    animation-timing-function: ease-in-out;
+    animation-duration: 3s;
+
+}
+#home p:nth-child(1){
+    animation-delay: 0s;
+}
+#home p:nth-child(2){
+    animation-delay: 3s;
+}
+#home p:nth-child(3){
+    animation-delay: 6s;
+
+}
+@keyframes text {
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+    
+}
+@media screen and (max-width:576px) {
+    #home p{
+        font-size:40px ;
+    }
+    #home button{
+        margin-right: 105px;
+        
+    }
+    
+}
+@media screen and (max-width:768px) {
+    #home p{
+        font-size:40px ;
+    }
+    
+}
+#txtcontent{
+    height: 200px;
+    width: 500px;
+    position:absolute;
+    top: 60%;
+    left:0;
+    padding-left: 50px;
+    padding-top:10px;
+}
+#txtcontent button{
+    animation-name:btn;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    margin-top: 20px;
+    margin-left: 145px;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes btn {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(15px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+@media screen and (max-width:576px) {
+    #txtcontent{
+        width: 400px;
+    }
+    #txtcontent button{
+        margin-left: 130px;
+    }
+}
+#txtcontent h2{
+    animation-name: floattxt;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+@keyframes floattxt {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(8px);
+    }
+    100%{
+        transform: translateY(0px);
+
+    }
+    
+}
+#about{
+    width: 100%;
+    height: 100vh;
+    background:linear-gradient(30deg,rgb(15, 15, 15),rgb(45, 45, 119));
+    display: flex;
+    align-items: center;
+}
+#about h1,h2,h5,p{
+    color: white;
+}
+#about h1{
+    border-bottom: 2px solid white;
+}
+@media screen and (max-width:515px) {
+#about{
+    height: 130vh;
+}
+.card{
+    margin-left: 90px;
+    margin-bottom: 100px;
+}
+#aboutcnt{
+    margin-bottom: 100px;
+}
+}
+@media screen and (max-width:810px) {
+    #about{
+        height: 200vh;
+
+    }    
+    .card{
+        height: 300px;
+        width: 300px;
+        
+    }
+    #aboutcnt{
+        
+        width: 300px;
+        height: 300px;
+        margin-left: 90px;
+    }
+        #about button{
+            margin-left: 75px;
+            margin-top: 20px;
+        }
+}
+#about button{
+    animation-name: abtbtn;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+@keyframes abtbtn {
+    0%{
+        transform: translateY(0px);
+        transform: translateX(-7px);
+    }
+    50%{
+        transform: translateY(7px);
+        transform: translateX(0px);
+    }
+    100%{
+        transform: translateY(0px);
+        transform: translateX(-7px);
+    }
+}
+#aboutcnt{
+    animation-name: abtctn;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+
+}
+@keyframes abtctn {
+    0%{
+        transform: translateX(0px);
+        
+    }
+    50%{
+        transform: translateX(8px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+.card{
+    animation-name: crd;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+
+}
+@keyframes crd {
+    0%{
+        transform: translateX(0px);
+        
+    }
+    50%{
+        transform: translateX(-18px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+#skills{
+    width: 100%;
+    height: 150vh;
+    background: linear-gradient(30deg,rgb(45, 45, 119),rgb(15, 15, 15));
+}
+#skillcnt{
+    padding-top: 5%;
+
+}
+#skillcnt h6{
+    color: white;
+}
+@media screen and (max-width:1000px) {
+    #skills{
+        height: 190vh;
+    }
+    .educnt-1,.educnt-2,.educnt-3,.educnt-4{
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    
+}
+
+
+.educnt-1,.educnt-2,.educnt-3,.educnt-4{
+
+    height: 150px;
+    width: auto;
+    border: 1px solid white;
+    padding-left: 3px;
+    padding-right: 2px;
+    color: white;
+    }
+.educnt-1{
+    animation-name: eduone;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+.educnt-2{
+    animation-name: edutwo;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+.educnt-3{
+    animation-name: eduthree;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+.educnt-4{
+    animation-name: edufour;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+@keyframes eduone {
+    0%{
+        transform: translateY(0px);
+        transform: translateX(0px);
+    }
+    50%{
+        transform: translateY(3px);
+        transform: translateX(-3px);
+    }
+    100%{
+        transform: translateY(0px);
+        transform: translateX(0px);
+    }
+    
+}
+@keyframes edutwo {
+    0%{
+        transform: translateY(0px);
+        transform: translateX(0px);
+    }
+    50%{
+        transform: translateY(3px);
+        transform: translateX(3px);
+    }
+    100%{
+        transform: translateY(0px);
+        transform: translateX(0px);
+    }
+    
+}
+@keyframes eduthree {
+    0%{
+        transform: translateY(0px);
+        transform: translateX(0px);
+    }
+    50%{
+        transform: translateY(3px);
+        transform: translateX(-3px);
+    }
+    100%{
+        transform: translateY(0px);
+        transform: translateX(0px);
+    }
+    
+}
+@keyframes edufour {
+    0%{
+        transform: translateY(0px);
+        transform: translateX(0px);
+    }
+    50%{
+        transform: translateY(3px);
+        transform: translateX(3px);
+    }
+    100%{
+        transform: translateY(0px);
+        transform: translateX(0px);
+    }
+    
+}
+.skt{
+    padding-top: 10px;
+}
+#works{
+    width: 100%;
+    height: 100vh;
+     background: linear-gradient(30deg,rgb(15, 15, 15),rgb(45, 45, 119));
+
+    }
+    #works h2{
+        padding-top: 5%;
+    }
+    #projects{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5%;
+    }
+    
+    .carousel{
+        width: 60%;
+        height: 60vh;
+        box-shadow: 10px 20px 10px rgba(0,0,0,0.4);
+        
+    }
+    .wrkimg{
+        width: 100%;
+        height: 60vh;
+
+    }
+    @media screen and (max-width:576px) {
+    .carousel{
+        width: 90%;
+        height:65vh ;
+        margin-top: 5%;
+    }
+    #projects{
+        padding-top: 5%;
+    }
+    .wrkimg{
+        width: 90%;
+        height: 65vh;
+
+    }        
+    }
+    #contact{
+        width: 100%;
+        height: 120vh;
+        background: linear-gradient(30deg,rgb(15, 15, 15),rgb(45, 45, 119));
+
+    }
+    @media screen and (max-width:576px) {
+
+        #contact form{
+            margin-top: 50px;
+        }
+
+        #contact{
+            width: 100%;
+            height: 180vh;
+        }
+        #contact h2{
+            padding-top: 8%;
+        }
+        iframe{
+            margin-top: 12%;
+            height: 400px;
+            width: 400px;
+            margin-left: 6.5%;
+        }
+        #contact label{
+            display: none;
+        }
+        
+        #contact input{
+    
+            width: 80%;
+            margin-left: 45px;
+        }
+        #contact textarea{
+            
+            width: 80%;
+            margin-left: 45px;
+        }
+        .conbtn{
+            width: 50%;
+            margin-left: 25%;
+            margin-top: 5%;
+        }
+    }
+    #contact textarea,input{
+        background:linear-gradient(30deg,rgb(15,15,15),rgb(45,45,119));
+        color: white !important;
+    
+        }
+        #contact label{
+            color: red;
+        }
+        #contact h2{
+            padding-top: 5%;
+            
+        }
+        
+        .concnt{
+            margin-top: 7%;
+        }
+        
+
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    background: linear-gradient(30deg,rgb(15,15,15),rgb(45,45,119),rgb(15,15,15));
+}
+footer h6{
+    color: white;
+    letter-spacing: 1px;
+    font-weight: 800;
+}
+@media screen and (max-width:576px) {
+    footer h6{
+        text-align: center;
+    }
+    
+}
+
+
+#scrlbtn{
+    height: 50px;
+    width: 35px;
+    border-radius: 30px;
+    position:fixed;
+    top: 87%;
+    right: 2%;
+    border: 3px solid rgb(189, 54, 54);
+    background:linear-gradient(30deg,rgb(15,15,15),rgb(45,45,119));
+    animation-name: scrlup;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+i{
+    color: white;
+    font-size: 22px;
+}
+@keyframes scrlup {
+    0%{
+        
+        transform: scale(1);
+    }
+
+    50%{
+        
+        transform: scale(0.9);
+    }
+    100%{
+        
+        transform: scale(1);
+    }    
+}

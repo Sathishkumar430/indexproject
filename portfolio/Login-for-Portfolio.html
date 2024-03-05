@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login-For-Portfolio</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        cursor: pointer;
+       
+    }
+    body{
+        background: url(loginprtimg.png);
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        margin-top: 12%;
+    }
+    #form{
+        border-radius: 15px;
+        height: 400px;
+        width: 400px;
+        backdrop-filter:blur(50px);
+    }
+    input{
+
+    color: white;   
+    width: 100%;
+    height: 29px;
+    background-color: transparent;
+    border-radius: 10px;
+    padding-bottom: 7px;
+    border: none;
+    outline: none;
+    }
+    legend{
+    color: white;
+    }
+    #f1,#f2{
+        border-radius: 10px;
+        height: 50px;
+        width: 300px;
+    }
+    form{
+        
+        display: flex;
+        margin-top: 10px;
+        margin-left: 50px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        flex-direction:column;
+    }
+    #f2{
+    margin-top: 20px;}
+    button{
+        text-transform: uppercase;
+        font-weight:800;
+        height: 40px;
+        border-radius: 15px;
+        margin-top: 10px;
+        margin-left: 150px;
+        width: 100px;
+        color: white;
+        border: 2px solid white;
+        background-color: transparent;
+    }
+    h1{
+        margin-top: 40px;
+    }
+    ::placeholder{
+        color: white;
+    }
+    #swpass p{
+        color: white;
+        margin-top: 20px;
+        margin-left: 130px;
+    }
+    #sepass{
+        height: 15px;
+        width: 15px;
+        margin-left: 240px;
+        transform: translateY(-17px);
+    } 
+
+</style>
+<body>
+    <div id="form">
+        <h1 style="text-align: center; color: white;">Login-For-Portfolio</h1>
+        <form>
+        <fieldset id="f1">
+        <legend style="text-align: center;">Email</legend>
+        <input type="email" id="fnem" style="text-align: center;" onchange="lowercase()" placeholder="Do you have acess..?" required>
+    </fieldset>
+    <fieldset id="f2">
+        <legend style="text-align: center;">Password</legend>
+        <input type="password" id="fnpass" style="text-align: center;" placeholder="Enter valid Password..." required>
+    </fieldset>
+        </form>
+        <button onclick="acessport()">Login</button>
+        <div id="swpass">
+            <p>Show Password</p><input type="checkbox" onclick="togglepassword()" id="sepass">
+        </div>   
+            
+    </div>
+
+           
+    <script>
+
+            function acessport(){
+                let email=document.getElementById("fnem").value
+                let password=document.getElementById("fnpass").value
+
+                    if(email =="sathishkumar@gmail.com" && password =="Satiz430"){
+                        window.open("sathishportfolio.html")
+                        
+                    }
+                    else{
+                        alert("ena thambi enaa achi ?")
+                    }
+
+            }
+
+                function togglepassword(){
+
+                    let sepass=document.getElementById("fnpass")
+
+                    if(sepass.type =="password"){
+                        sepass.type="text"
+                    }
+                    else{
+                        sepass.type="password"
+                    }
+
+                }
+
+                function lowercase(){
+
+                    let changetxt=document.getElementById("fnem")
+                    changetxt.value=changetxt.value.toLowerCase()
+
+                }
+    </script>
+
+
+</body>
+</html>

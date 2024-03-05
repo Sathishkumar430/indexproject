@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        text-align: center;
+    }
+    div{
+        display: flex;
+        justify-content: center;
+        
+        margin-top: 15%;
+    }
+    legend
+    {
+        text-transform: capitalize;
+        font-size: 17px;
+        font-weight: 800;
+
+    }
+    #show{
+        height:150px;
+        width: 500px;
+    }
+    #btn{
+        margin-top: 30px;
+        height: 50px;
+        width: 150px;
+        text-transform: capitalize;
+        font-size: 15px;
+        font-weight: 800;
+        border-radius: 20px;
+        border: none;
+        background-color: blueviolet;
+    }
+
+    fieldset{
+        border: 2px solid brown;
+    }
+</style>
+
+<body>
+    <div>
+    <fieldset id="show">
+        <legend>random number generator</legend>
+        <h2 id="getnum"></h2>
+    </fieldset>
+</div>
+<button id="btn" onclick="gennum()">get number</button>
+    <script>
+        function gennum(){
+            let generator=document.getElementById("getnum").innerHTML=("Your lucky num is:"+" "+Math.floor(Math.random()*100+1))
+            
+        }
+        
+
+    </script>
+</body>
+</html>

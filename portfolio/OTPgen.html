@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP-Generator</title>
+    <style>
+        .container{
+            height: 300px;
+            width: 350px;
+            box-shadow: 10px 10px 15px 5px black;
+            color:rgb(12, 12, 243);
+            display: flex;
+            border-radius: 20px;
+            justify-content: center;
+            flex-direction: column;
+        }
+        h2{ 
+            margin-top: 30px;
+            text-align: center;
+        }
+        .items {
+        height: 90%;
+        width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            
+            
+        }
+        .main{
+            display: flex;
+            justify-content: center;
+            margin-top: 10%;
+        }
+        .items button{
+            height: 40px;
+            width: 100px;
+            font-size: 15px;
+            color:blue;
+            font-weight: 800;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+
+
+    <div class="container">
+        <h2>OTP-Generator</h2>
+        <div class="items">
+        
+         <h2 id="num"></h2>
+        <button onclick="getotp()">Get OTP </button>
+    </div>
+    </div>
+</div>
+
+    <script>
+        function getotp(){
+          let generator=  document.getElementById("num").innerHTML=("Your OTP IS :" + " "+ Math.floor(Math.random()*900000))
+        }
+        
+    </script>
+    
+</body>
+</html>
