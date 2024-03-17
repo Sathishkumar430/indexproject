@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    *{
+        margin: 0;
+        cursor: pointer;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    nav{
+        background:linear-gradient(30deg,red,blue);
+        height: 50px;
+        width: 100%;
+    }
+    #parent{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    h2{
+        background:linear-gradient(90deg,blue,white,blue);
+        font-size: 25px;
+        letter-spacing: 2px;
+        margin-left:  20px;
+        color: aqua;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    #list ul li {
+        color: white;
+        display:inline-block;
+        padding: 15px 10px;
+        transition: 0.5s;
+    }
+    #btn{
+        margin-right:20px ;
+    }
+    button{
+        border: 2px solid white;
+        outline: none;
+        color: white;
+        background: linear-gradient(30deg,blue,red);
+        height: 30px;
+        width: 70px;
+        border-radius:10px ;
+        transition: 0.5s;
+    }
+    button:hover{
+        transform: scale(1.1);
+
+    }
+    i{
+        color: white;
+        
+    }
+    #list ul li:hover{
+        background: linear-gradient(30deg ,white,red);
+        -webkit-background-clip: text;
+        transform: scale(1.1);
+        -webkit-text-fill-color: transparent;
+    }
+    #main{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+    }
+    #set{
+    
+        height: 300px;
+        width: 600px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+    }
+    #main button{
+    margin-left: 20px;
+    }
+    #main button:hover{
+        transform: scale(1);
+    }
+    #light{
+        margin-bottom: 100px;
+        border: 1px solid white;
+        border-bottom: 30px solid white;
+        height: 100px;
+        width: 100%;
+        border-top-right-radius:15px ;
+        border-top-left-radius:15px;
+    }
+    @media screen and (max-width:500px){
+        #set{
+            width: 400px;
+        }
+        
+    }
+</style>
+<body>
+    <nav id="navbar">
+        <div id="parent">
+            <div>
+            <h2>WEb-X</h2>
+            </div>
+            <div id="list">
+                <ul>
+                    <a href="#main"><li>Home<i class="fa fa-home"></i></li></a>
+                    <a href=""><li>About<i class="fa fa-home"></i></li></a>
+                    <a href=""><li>Settings<i class="fa fa-home"></i></li></a>
+                </ul>
+            </div>
+                    <div id="btn">
+                        <button>Login</button>
+                    </div>
+        </div>
+</nav>
+    <section id="main">
+        <div id="set">
+            <div id="light">
+
+            </div>
+            <div>
+                <button onclick="onlight()">ON</button>
+                <button onclick="offlight()">OFF</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function onlight(){
+            document.getElementById("light").style.backgroundColor = "yellow"
+        }
+        function offlight(){
+            document.getElementById("light").style.backgroundColor="transparent"
+        }
+    </script>
+</body>
+</html>
